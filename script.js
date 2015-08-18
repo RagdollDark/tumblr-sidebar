@@ -7,7 +7,7 @@
 
 XKit.extensions.right_column_sidebar = new Object({
 
-	running: true,
+	running: false,
 
 	preferences: {
 		"dashonly": {

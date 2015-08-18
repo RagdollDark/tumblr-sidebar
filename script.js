@@ -37,19 +37,19 @@ XKit.extensions.right_column_sidebar = new Object({
 			account.click();
 			
 			// find the menu created because of the click
-			popover = document.getElementsByClassName("popover--account-popover")[0];
+			popover = document.cloneNode("popover--account-popover")[0];
 			
 			// find the sidebar to put the menu in
 			sidebar = document.getElementById("right_column");
 			
 			// add a class to the menu so it can be removed if the extension is disabled
-			popover.childNodes[0].classList.add("estufars_sidebar_fix");
+			popover.childNodes[0].classList.add("right_column_sidebar");
 			
 			// move the menu to the sidebar
 			sidebar.insertBefore(popover.childNodes[0], sidebar.firstChild);
 			
 			// remove the account button since the menu has been moved
-			account.style.display = "none";
+			// account.style.display = "none";
 			
 			// this needs to be delayed a second for some reason
 			window.setTimeout(function() {
